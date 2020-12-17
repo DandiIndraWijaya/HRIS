@@ -31,20 +31,12 @@ Route::group(['middleware' => ['admin', 'auth']], function (){
 	Route::get('/dashboard/cari_pemilih', 'App\Http\Controllers\AdminController@cari_pemilih')->name('cari_pemilih');
 
 	Route::group(['prefix' => 'admin'], function () {
-		// Buat Pemilihan
-		Route::get('/pemilihan', 'App\Http\Controllers\PemilihanController@index')->name('admin_pemilihan');
-		Route::post('/input_pemilihan', 'App\Http\Controllers\PemilihanController@input_pemilihan')->name('admin_input_pemilihan');
-		Route::post('/update_pemilihan', 'App\Http\Controllers\PemilihanController@update_pemilihan')->name('admin_update_pemilihan');
-		Route::post('/hapus_pemilihan', 'App\Http\Controllers\PemilihanController@hapus_pemilihan')->name('admin_hapus_pemilihan');
-		// Akhir Buat Pemilihan
-
-
-		// Buat Calon
+		// Manajemen Pegawai
 		Route::get('/pegawai', 'App\Http\Controllers\PegawaiController@index')->name('pegawai');
 		Route::post('/input_pegawai', 'App\Http\Controllers\PegawaiController@input_pegawai')->name('admin_input_pegawai');
 		Route::post('/update_calon', 'App\Http\Controllers\CalonController@update_calon')->name('admin_update_calon');
 		Route::post('/hapus_pegawai', 'App\Http\Controllers\PegawaiController@hapus_pegawai')->name('admin_hapus_pegawai');
-		// Akhir Buat Calon
+		// Akhir Manajemen Pegawai
 	});
 });
 
