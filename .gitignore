@@ -1,0 +1,17 @@
+/node_modules
+/presets
+/storage/framework/laravel-excel/
+/public/hot
+/public/storage
+/public/foto_calon
+/public/file_siswa
+/public/file_pemilih
+/storage/*.key
+/vendor
+.env
+.env.backup
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
