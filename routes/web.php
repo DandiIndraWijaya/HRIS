@@ -34,7 +34,7 @@ Route::group(['middleware' => ['admin', 'auth']], function (){
 		// Manajemen Pegawai
 		Route::get('/pegawai', 'App\Http\Controllers\PegawaiController@index')->name('pegawai');
 		Route::post('/input_pegawai', 'App\Http\Controllers\PegawaiController@input_pegawai')->name('admin_input_pegawai');
-		Route::post('/update_calon', 'App\Http\Controllers\CalonController@update_calon')->name('admin_update_calon');
+		Route::post('/update_pegawai', 'App\Http\Controllers\PegawaiController@update_pegawai')->name('admin_update_pegawai');
 		Route::post('/hapus_pegawai', 'App\Http\Controllers\PegawaiController@hapus_pegawai')->name('admin_hapus_pegawai');
 		// Akhir Manajemen Pegawai
 	});
